@@ -1,0 +1,79 @@
+
+
+
+
+###도서를 대여하다.
+bookservice -------> book <<domain>>으로 바로 접근
+
+
+
+updateBorrowInfo --->> createBorrowInfo 로 변환
+
+
+
+incrementCoffeePoint ---->> DB에 바로 접근하지말고 Domain으로 접근.
+
+
+###커피포인트를 교환권으로 바꾼다.
+
+session 객체 만들고 컨트롤러 객체로 
+로그인할때도 쎄션객체 생성. ex) putmemberid() 메소드 사용.
+subtractPoint메소드 member domain으로 바로 접근
+
+
+###도서구매를 신청하다.
+
+
+
+
+updatePurchase --> addPurchase()로 변경
+
+
+
+###추천도서를 조회한다.
+
+
+
+
+
+
+
+#클래스다이어그램
+
+
+
+
+
+#패키지 다이어그램
+
+
+
+
+
+
+#문서추가
+
+
+스키마구조 (Table 속성 create db )
+디자인 
+
+DB디자인 
+테이블 모양 그림그리기 attribute 속성 
+DDL ---> create 코드넣기 
+
+
+4 5번 없애기 
+
+
+1 2번 데모버젼           
+
+
+코드를 보여줄때      .war 로 보여줄것
+
+
+
+
+
+
+
+
