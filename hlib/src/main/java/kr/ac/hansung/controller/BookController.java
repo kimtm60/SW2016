@@ -42,11 +42,15 @@ public class BookController {
 	}
 	
 	
+	
 	@RequestMapping("borrow/{bookId}")
 	public String requestBorrow(@PathVariable("bookId") int bookId, HttpSession session) {
+		
+		String mv;
 		String memberId=(String) session.getAttribute("memberId");
-		bookService.doBorrow(memberId,bookId);
-		return "redirect:/login";
+		mv = bookService.doBorrow(memberId,bookId);
+		System.out.println(mv);
+		return mv;
 
 	}
 	

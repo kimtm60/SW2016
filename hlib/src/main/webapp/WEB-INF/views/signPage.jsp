@@ -20,7 +20,7 @@
         </table>
         <table>
             <tr>
-                <td align="center"><input type="submit" value="회워가입"></td>
+                <td align="center"><input type="submit" value="회원가입"></td>
                 <td align="center"><input type="reset" value="리셋"></td>
             </tr>
         </table>

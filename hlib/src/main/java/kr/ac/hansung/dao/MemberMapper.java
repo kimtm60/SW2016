@@ -12,12 +12,12 @@ public class MemberMapper implements RowMapper<Member> {
 
 		public Member mapRow(ResultSet rs, int rowNum) throws SQLException {
 		
-			Member offer = new Member();
-			offer.setMemberId(rs.getString("memberId"));
-			offer.setPassword(rs.getString("password"));
-			offer.setCoffeePoint(rs.getString("coffeePoint"));
+			Member member = new Member();
+			member.setMemberId(rs.getString("memberId"));
+			member.setPassword(rs.getString("password"));
+			member.setCoffeePoint(rs.getInt("coffeePoint"));
 		
-			return offer;
+			return member;
 		
 	}
 	

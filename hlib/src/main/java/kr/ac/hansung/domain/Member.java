@@ -4,7 +4,7 @@ public class Member {
 
 	private String memberId;
 	private String password;
-	private String coffeePoint;
+	private int coffeePoint;
 	
 	
 	
@@ -20,10 +20,10 @@ public class Member {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getCoffeePoint() {
+	public int getCoffeePoint() {
 		return coffeePoint;
 	}
-	public void setCoffeePoint(String coffeePoint) {
+	public void setCoffeePoint(int coffeePoint) {
 		this.coffeePoint = coffeePoint;
 	}
 	
@@ -31,6 +31,7 @@ public class Member {
 		super();
 		this.memberId = memberId;
 		this.password = password;
+		this.coffeePoint = coffeePoint;
 	}
 	public Member() {
 	

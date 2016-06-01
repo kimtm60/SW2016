@@ -39,7 +39,7 @@ public class BookService {
 	}
 
 	@Transactional
-	public void doBorrow(String memberId, int bookId) {
+	public String doBorrow(String memberId, int bookId) {
 		Book book = bookDAO.getBook(bookId);
 		if(book.getBookCount()!=0){
 			book.setBookCount(book.getBookCount()-1);
@@ -47,10 +47,15 @@ public class BookService {
 			BorrowInfo borrowInfo = new BorrowInfo(memberId,bookId);
 			borrowInfoDAO.insertBorrowInfo(borrowInfo);
 			memberDAO.incrementCoffeePoint(memberId);
-			
-			
-			
+		return "redirect:/home";	
 		}
+			else{
+				return "failBorrow";
+			}
+			
+			
+			
+		
 	}
 
 	public List<BorrowInfo> selectBorrowList(String memberId) {
